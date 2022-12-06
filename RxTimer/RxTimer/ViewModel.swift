@@ -41,6 +41,7 @@ class ViewModel {
         return Observable.create { observe in
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
                 self.counter += 1
+                observe.onNext(String(self.counter))
             }
             
             return Disposables.create()

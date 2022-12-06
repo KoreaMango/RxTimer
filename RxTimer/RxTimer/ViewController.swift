@@ -54,8 +54,11 @@ class ViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        timeLable.rx.text
-            .
+        viewModel.timerOn()
+            .observe(on: MainScheduler.instance)
+            .subscribe { str in
+                self.timeLable.text = str
+            }
         
     }
     
