@@ -11,9 +11,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct ViewModel {
-
-    func rxswiftLoadImage(from imageUrl: String) -> Observable<UIImage?> {
+class ViewModel {
+    let LARGER_IMAGE_URL = "https://picsum.photos/1280/720/?random"
+    var counter: Int = 0
+    
+    func rxswiftLoadImage() -> Observable<UIImage?> {
+        let imageUrl : String = LARGER_IMAGE_URL
         let url = URL(string: imageUrl)!
         return Observable.create { seal in
             let task = URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -32,5 +35,16 @@ struct ViewModel {
 
             return Disposables.create()
         }
+    }
+    
+    func timerOn() -> Observable<String> {
+        return Observable.create { observe in
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                self.counter += 1
+            }
+            
+            return Disposables.create()
+        }
+       
     }
 }

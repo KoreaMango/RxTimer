@@ -14,17 +14,13 @@ import RxCocoa
 class ViewController: UIViewController {
     
     var viewModel = ViewModel()
-    var counter: Int = 0
-    let LARGER_IMAGE_URL = "https://picsum.photos/1280/720/?random"
     let disposeBag = DisposeBag()
-
     
     lazy var timeLable : UILabel = {
         let label = UILabel()
         label.text = "Nil"
         label.font = UIFont.systemFont(ofSize:24)
         label.textAlignment = .center
-        
         return label
     }()
     
@@ -32,7 +28,6 @@ class ViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName:
                                 "questionmark")
-        
         return imageView
     }()
     
@@ -48,7 +43,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setView()
         setConstraint()
-        timerOn()
         bind()
     }
 
@@ -60,10 +54,13 @@ class ViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
+        timeLable.rx.text
+            .
+        
     }
     
     func loadImage() {
-        _ = viewModel.rxswiftLoadImage(from: LARGER_IMAGE_URL)
+        _ = viewModel.rxswiftLoadImage()
             .observe(on: MainScheduler.instance)
             .subscribe({ result in
                 switch result {
@@ -77,13 +74,6 @@ class ViewController: UIViewController {
                     break
                 }
             })
-    }
-    
-    func timerOn() {
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            self.counter += 1
-            self.timeLable.text = "\(self.counter)"
-        }
     }
     
     func setView() {
