@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         
         viewModel.timerOn()
             .observe(on: MainScheduler.instance)
-            .subscribe { str in
+            .bind { str in
                 self.timeLable.text = str
             }
         

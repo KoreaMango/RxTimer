@@ -39,13 +39,20 @@ class ViewModel {
     
     func timerOn() -> Observable<String> {
         return Observable.create { observe in
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                self.counter += 1
-                observe.onNext(String(self.counter))
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                observe.onNext(self.time())
             }
             
             return Disposables.create()
         }
        
+    }
+    
+    func time() -> String {
+        var fommater = DateFormatter()
+        fommater.dateFormat = "HH:mm:ss"
+        var currentTime = fommater.string(from: Date())
+        
+        return currentTime
     }
 }
