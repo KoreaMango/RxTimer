@@ -39,6 +39,8 @@ class ViewModel {
     
     func timerOn() -> Observable<String> {
         return Observable.create { observe in
+            observe.onNext(self.time())
+            
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
                 observe.onNext(self.time())
             }
