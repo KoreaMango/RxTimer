@@ -41,13 +41,13 @@ class ViewController: UIViewController {
     
     var containerView: UIView = {
        let view = UIView()
-        view.backgroundColor = .gray
+        view.layer.borderWidth = 1.0
         return view
     }()
     
     var tableView: UITableView = {
         var tableView = UITableView()
-        tableView.backgroundColor = .brown
+        tableView.layer.borderWidth = 1.0
         return tableView
     }()
 
@@ -105,6 +105,13 @@ class ViewController: UIViewController {
             make.height.equalTo(100)
         }
         
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(timeLable.snp.bottom).offset(20)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
+            make.bottom.equalTo(containerView.snp.top).offset(-20)
+        }
+        
         containerView.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
@@ -113,7 +120,7 @@ class ViewController: UIViewController {
         }
         
         picture.snp.makeConstraints { make in
-            make.bottom.equalTo(containerView.snp.bottom)
+            make.bottom.equalTo(containerView.snp.bottom).offset(-20)
             make.width.equalTo(200)
             make.height.equalTo(200)
             make.leading.equalTo(containerView.snp.leading).offset(20)
@@ -124,17 +131,8 @@ class ViewController: UIViewController {
             make.width.equalTo(100)
             make.height.equalTo(50)
             make.trailing.equalTo(containerView.snp.trailing).offset(-50)
-            
-        }
-        
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(timeLable.snp.bottom).offset(20)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
-            make.bottom.equalTo(containerView.snp.top)
         }
     }
-
 }
 
 
