@@ -12,27 +12,31 @@ import RxSwift
 import RxCocoa
 
 class ViewModel {
+    // MARK: - Properties
     let LARGER_IMAGE_URL = "https://picsum.photos/1280/720/?random"
     var counter: Int = 0
+    var recodeTimes: [String] = []
     
+    
+    // MARK: - Observable
     func rxswiftLoadImage() -> Observable<UIImage?> {
         let imageUrl : String = LARGER_IMAGE_URL
         let url = URL(string: imageUrl)!
         return Observable.create { seal in
             let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-
-                        guard let data = data else {
-                            seal.onNext(nil)
-                            seal.onCompleted()
-                            return
-                        }
-
-                        let image = UIImage(data: data)
-                            seal.onNext(image)
-                            seal.onCompleted()
-                    }
-                    task.resume()
-
+                
+                guard let data = data else {
+                    seal.onNext(nil)
+                    seal.onCompleted()
+                    return
+                }
+                
+                let image = UIImage(data: data)
+                seal.onNext(image)
+                seal.onCompleted()
+            }
+            task.resume()
+            
             return Disposables.create()
         }
     }
@@ -47,10 +51,23 @@ class ViewModel {
             
             return Disposables.create()
         }
-       
+        
     }
     
-    func time() -> String {
+    func items() -> Observable<[String]> {
+        return Observable.create { obser in
+            obser.onNext(self.recodeTimes)
+            return Disposables.create()
+        }
+    }
+
+    func recode() {
+        recodeTimes.append(self.time())
+    }
+    
+    // MARK: - Private
+    
+    private func time() -> String {
         var fommater = DateFormatter()
         fommater.dateFormat = "HH:mm:ss"
         var currentTime = fommater.string(from: Date())

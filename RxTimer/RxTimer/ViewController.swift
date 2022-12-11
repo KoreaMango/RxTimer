@@ -48,9 +48,9 @@ class ViewController: UIViewController {
     var tableView: UITableView = {
         var tableView = UITableView()
         tableView.layer.borderWidth = 1.0
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         return tableView
     }()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,8 @@ class ViewController: UIViewController {
         changeButton.rx.tap
             .bind {
                 self.loadImage()
+                self.viewModel.recode()
+                self.recordTime()
             }
             .disposed(by: disposeBag)
         
@@ -72,6 +74,8 @@ class ViewController: UIViewController {
             .bind { str in
                 self.timeLable.text = str
             }
+        
+       
     }
     
     func loadImage() {
@@ -87,6 +91,20 @@ class ViewController: UIViewController {
                     break
                 }
             })
+    }
+    
+    func recordTime() {
+        tableView.delegate = nil
+        tableView.dataSource = nil
+        viewModel.items()
+            .debug()
+            .bind(to: tableView.rx.items) { (tableView, row, element) in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+                cell.textLabel?.text = "\(row)번 째 시간은 \(element)"
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
     }
     
     func setView() {
