@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B015856F-C039-43C2-AD5F-0D42A3492E62"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxTimer/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "init(domain:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9BBC2BAA-C6DC-45D6-9856-62216DE16925"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -30,25 +14,9 @@
             filePath = "RxTimer/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "init(domain:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9EC35D19-A542-4B77-B715-C63ECC72AE66"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxTimer/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "bind()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,65 +30,17 @@
             filePath = "RxTimer/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "init(domain:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "41390102-B4A4-4543-8607-4E7F20FB5E05"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxTimer/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "init(domain:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "41390102-B4A4-4543-8607-4E7F20FB5E05 - 72a44dd3b73a35ae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RxTimer.ViewModel.init(domain: RxTimer.Fetchable) -&gt; RxTimer.ViewModel"
-                  moduleName = "RxTimer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "820">
-               </Location>
-               <Location
-                  uuid = "41390102-B4A4-4543-8607-4E7F20FB5E05 - edaaa453e91257b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #4 (__C.UIImage) -&gt; () in implicit closure #3 (RxSwift.BehaviorSubject&lt;__C.UIImage&gt;) -&gt; (__C.UIImage) -&gt; () in RxTimer.ViewModel.init(domain: RxTimer.Fetchable) -&gt; RxTimer.ViewModel"
-                  moduleName = "RxTimer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7133952B-BD40-477E-9EC5-FC3371B71B1F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxTimer/Store.swift"
@@ -136,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9811D896-5D2C-4DAD-85CB-4BCAEE7A64B1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxTimer/Repo.swift"
@@ -183,56 +103,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55C052EB-DF34-4484-BA67-F3BD5EE6E792"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxTimer/Store.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "fetchImage()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "55C052EB-DF34-4484-BA67-F3BD5EE6E792 - 9b49f95627cc34f8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RxTimer.Store.fetchImage() -&gt; RxSwift.Observable&lt;__C.UIImage&gt;"
-                  moduleName = "RxTimer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/Store.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "55C052EB-DF34-4484-BA67-F3BD5EE6E792 - c6f7a07f99d1c1d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data) -&gt; __C.UIImage in RxTimer.Store.fetchImage() -&gt; RxSwift.Observable&lt;__C.UIImage&gt;"
-                  moduleName = "RxTimer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/Store.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "861CAD1E-C187-4986-A5C3-DAA263CA8085"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxTimer/Repo.swift"
@@ -274,6 +146,246 @@
                   offsetFromSymbolStart = "104">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFB498A8-2254-4A61-9605-36E862B37EB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Repo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9DB5132-03AB-4C2F-B6CF-88734D6CFFB9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "init(domain:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9DB5132-03AB-4C2F-B6CF-88734D6CFFB9 - 72a44dd3b73a35ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxTimer.ViewModel.init(domain: RxTimer.Fetchable) -&gt; RxTimer.ViewModel"
+                  moduleName = "RxTimer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "D9DB5132-03AB-4C2F-B6CF-88734D6CFFB9 - 8ac057769791d8c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 () -&gt; RxSwift.Observable&lt;__C.UIImage&gt; in implicit closure #1 (RxTimer.Fetchable) -&gt; () -&gt; RxSwift.Observable&lt;__C.UIImage&gt; in RxTimer.ViewModel.init(domain: RxTimer.Fetchable) -&gt; RxTimer.ViewModel"
+                  moduleName = "RxTimer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FB01B04-AA08-42AA-AF7B-94689BD371B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Repo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C30ADD4-708C-4163-9800-1863B87E5528"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Repo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FB3E107-F242-461E-B9F1-F2EE6A3F72D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Repo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98ADB5F2-6043-43E3-A2F1-4E6512257677"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Store.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "98ADB5F2-6043-43E3-A2F1-4E6512257677 - 447949dac6440229"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) throws -&gt; __C.UIImage in RxTimer.Store.fetchImage() -&gt; RxSwift.Observable&lt;__C.UIImage&gt;"
+                  moduleName = "RxTimer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/Store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "98ADB5F2-6043-43E3-A2F1-4E6512257677 - 447949dac6440229"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) throws -&gt; __C.UIImage in RxTimer.Store.fetchImage() -&gt; RxSwift.Observable&lt;__C.UIImage&gt;"
+                  moduleName = "RxTimer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kangmingyu/Desktop/Mango/Rx+Clean-Architecture/RxTimer/RxTimer/RxTimer/Store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AD01DD5-1420-41E8-8B2C-8DDB951DA871"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/Store.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69B46A07-47A7-44D2-A4D6-D963B38EAA99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "init(domain:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AF61BE9-E009-42AD-A91F-9B3E829087DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "bind()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE2E664E-307B-466B-980D-02B378AFEF55"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "bind()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFA8CD76-ADFD-49D7-B6AA-5DA4077F10A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxTimer/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "bind()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

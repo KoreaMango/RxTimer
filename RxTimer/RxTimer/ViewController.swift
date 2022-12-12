@@ -32,10 +32,11 @@ class ViewController: UIViewController {
         // --------------
         
         changeButton.rx.tap
-            .bind {
-                self.viewModel.fetchImage
-                self.viewModel.recode
-            }
+            .bind(to: viewModel.fetchImage)
+            .disposed(by: disposeBag)
+        
+        changeButton.rx.tap
+            .bind(to: viewModel.recode)
             .disposed(by: disposeBag)
         
         // --------------
@@ -51,7 +52,6 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.recodedTimes
-            .debug()
             .bind(to: tableView.rx.items) { (tableView, row, element) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
                 cell.textLabel?.text = "\(row)번 째 시간은 \(element)"

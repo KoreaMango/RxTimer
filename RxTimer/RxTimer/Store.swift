@@ -18,11 +18,10 @@ class Store: Fetchable {
     func fetchImage() -> Observable<UIImage> {
         return APIService.fetchData()
             .map { data in
-                if let image = UIImage(data: data){
-                    return image
+                guard let image = UIImage(data: data) else {
+                    throw NSError(domain: "Image Err", code: -1)
                 }
-                return Mock.failImage
+                return image
             }
-        
     }
 }

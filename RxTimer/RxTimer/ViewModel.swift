@@ -42,40 +42,37 @@ class ViewModel: ViewModelType {
         let times = BehaviorSubject<[String]>(value: [])
         let timer = BehaviorSubject<String>(value: "00:00:00")
         
+        
         // INPUT
         fetchImage = fetching.asObserver()
         
         fetching
-            .debug()
             .flatMap(domain.fetchImage)
             .subscribe(onNext: uiImage.onNext)
             .disposed(by: disposeBag)
-        
+
         recode = recoding.asObserver()
-    
-    
+        
+        recoding
+            .withLatestFrom(times)
+            .map({ times in
+                var newTimes = times
+                newTimes.append(Util.currentTime())
+                return newTimes
+            })
+            .subscribe(onNext: times.onNext)
+            .disposed(by: disposeBag)
+
         // OUTPUT
-        image = uiImage.asObserver()
+        image = uiImage
         
         recodedTimes = times
         
-        timerStart = timer.asObserver()
+        timerStart = timer
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            timer
-               .onNext(self.currentTime())
+            timer.onNext(Util.currentTime())
         }
-       
-           
-    }
-
-    // MARK: - Private
-    private func currentTime() -> String {
-        let fommater = DateFormatter()
-        fommater.dateFormat = "HH:mm:ss"
-        let currentTime = fommater.string(from: Date())
-        
-        return currentTime
     }
 }
 

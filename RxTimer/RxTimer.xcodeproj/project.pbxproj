@@ -21,7 +21,20 @@
 		04F19C522946F12E00597497 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C512946F12E00597497 /* Repo.swift */; };
 		04F19C542946F96200597497 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C532946F96200597497 /* Store.swift */; };
 		04F19C562947125100597497 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C552947125100597497 /* Mock.swift */; };
+		04F19C5E2947764000597497 /* RxTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C5D2947764000597497 /* RxTimerTests.swift */; };
+		04F19C652947786300597497 /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C642947786300597497 /* ViewModelTest.swift */; };
+		04F19C672947AE7900597497 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C662947AE7900597497 /* Util.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F19C5F2947764000597497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043193C1291699DC00B807CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043193C8291699DC00B807CA;
+			remoteInfo = RxTimer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		043193C9291699DC00B807CA /* RxTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +49,10 @@
 		04F19C512946F12E00597497 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		04F19C532946F96200597497 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		04F19C552947125100597497 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		04F19C5B2947764000597497 /* RxTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F19C5D2947764000597497 /* RxTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTimerTests.swift; sourceTree = "<group>"; };
+		04F19C642947786300597497 /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
+		04F19C662947AE7900597497 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +67,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04F19C582947764000597497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				043193CB291699DC00B807CA /* RxTimer */,
+				04F19C5C2947764000597497 /* RxTimerTests */,
 				043193CA291699DC00B807CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				043193C9291699DC00B807CA /* RxTimer.app */,
+				04F19C5B2947764000597497 /* RxTimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,12 +105,22 @@
 				043193D0291699DC00B807CA /* ViewController.swift */,
 				043193F62916DEB100B807CA /* ViewModel.swift */,
 				04F19C552947125100597497 /* Mock.swift */,
+				04F19C662947AE7900597497 /* Util.swift */,
 				043193D2291699DC00B807CA /* Main.storyboard */,
 				043193D5291699DD00B807CA /* Assets.xcassets */,
 				043193D7291699DD00B807CA /* LaunchScreen.storyboard */,
 				043193DA291699DD00B807CA /* Info.plist */,
 			);
 			path = RxTimer;
+			sourceTree = "<group>";
+		};
+		04F19C5C2947764000597497 /* RxTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				04F19C5D2947764000597497 /* RxTimerTests.swift */,
+				04F19C642947786300597497 /* ViewModelTest.swift */,
+			);
+			path = RxTimerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +149,24 @@
 			productReference = 043193C9291699DC00B807CA /* RxTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04F19C5A2947764000597497 /* RxTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F19C612947764000597497 /* Build configuration list for PBXNativeTarget "RxTimerTests" */;
+			buildPhases = (
+				04F19C572947764000597497 /* Sources */,
+				04F19C582947764000597497 /* Frameworks */,
+				04F19C592947764000597497 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04F19C602947764000597497 /* PBXTargetDependency */,
+			);
+			name = RxTimerTests;
+			productName = RxTimerTests;
+			productReference = 04F19C5B2947764000597497 /* RxTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -120,11 +174,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					043193C8291699DC00B807CA = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					04F19C5A2947764000597497 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 043193C8291699DC00B807CA;
 					};
 				};
 			};
@@ -146,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				043193C8291699DC00B807CA /* RxTimer */,
+				04F19C5A2947764000597497 /* RxTimerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +220,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04F19C592947764000597497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -171,6 +237,7 @@
 				043193D1291699DC00B807CA /* ViewController.swift in Sources */,
 				043193CD291699DC00B807CA /* AppDelegate.swift in Sources */,
 				04F19C522946F12E00597497 /* Repo.swift in Sources */,
+				04F19C672947AE7900597497 /* Util.swift in Sources */,
 				04F19C562947125100597497 /* Mock.swift in Sources */,
 				04F19C542946F96200597497 /* Store.swift in Sources */,
 				043193F72916DEB100B807CA /* ViewModel.swift in Sources */,
@@ -178,7 +245,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04F19C572947764000597497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F19C652947786300597497 /* ViewModelTest.swift in Sources */,
+				04F19C5E2947764000597497 /* RxTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04F19C602947764000597497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043193C8291699DC00B807CA /* RxTimer */;
+			targetProxy = 04F19C5F2947764000597497 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		043193D2291699DC00B807CA /* Main.storyboard */ = {
@@ -370,6 +454,44 @@
 			};
 			name = Release;
 		};
+		04F19C622947764000597497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDUR55YWW6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ognam.RxTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RxTimer";
+			};
+			name = Debug;
+		};
+		04F19C632947764000597497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDUR55YWW6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ognam.RxTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RxTimer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -387,6 +509,15 @@
 			buildConfigurations = (
 				043193DE291699DD00B807CA /* Debug */,
 				043193DF291699DD00B807CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F19C612947764000597497 /* Build configuration list for PBXNativeTarget "RxTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F19C622947764000597497 /* Debug */,
+				04F19C632947764000597497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

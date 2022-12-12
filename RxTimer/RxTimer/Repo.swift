@@ -20,13 +20,13 @@ class APIService {
                     return
                 }
                 guard let data = data else {
+                    print("Fail")
                     return
                 }
                 
                 ob.onNext(data)
             }.resume()
             
-            ob.onCompleted()
             return Disposables.create()
         }
     }
