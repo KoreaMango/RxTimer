@@ -18,6 +18,9 @@
 		043193F02916DB9A00B807CA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 043193EF2916DB9A00B807CA /* RxSwift */; };
 		043193F52916DBA400B807CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 043193F42916DBA400B807CA /* SnapKit */; };
 		043193F72916DEB100B807CA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043193F62916DEB100B807CA /* ViewModel.swift */; };
+		04F19C522946F12E00597497 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C512946F12E00597497 /* Repo.swift */; };
+		04F19C542946F96200597497 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C532946F96200597497 /* Store.swift */; };
+		04F19C562947125100597497 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F19C552947125100597497 /* Mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		043193D8291699DD00B807CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043193DA291699DD00B807CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043193F62916DEB100B807CA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		04F19C512946F12E00597497 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		04F19C532946F96200597497 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		04F19C552947125100597497 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +74,11 @@
 			children = (
 				043193CC291699DC00B807CA /* AppDelegate.swift */,
 				043193CE291699DC00B807CA /* SceneDelegate.swift */,
+				04F19C512946F12E00597497 /* Repo.swift */,
+				04F19C532946F96200597497 /* Store.swift */,
 				043193D0291699DC00B807CA /* ViewController.swift */,
 				043193F62916DEB100B807CA /* ViewModel.swift */,
+				04F19C552947125100597497 /* Mock.swift */,
 				043193D2291699DC00B807CA /* Main.storyboard */,
 				043193D5291699DD00B807CA /* Assets.xcassets */,
 				043193D7291699DD00B807CA /* LaunchScreen.storyboard */,
@@ -161,6 +170,9 @@
 			files = (
 				043193D1291699DC00B807CA /* ViewController.swift in Sources */,
 				043193CD291699DC00B807CA /* AppDelegate.swift in Sources */,
+				04F19C522946F12E00597497 /* Repo.swift in Sources */,
+				04F19C562947125100597497 /* Mock.swift in Sources */,
+				04F19C542946F96200597497 /* Store.swift in Sources */,
 				043193F72916DEB100B807CA /* ViewModel.swift in Sources */,
 				043193CF291699DC00B807CA /* SceneDelegate.swift in Sources */,
 			);

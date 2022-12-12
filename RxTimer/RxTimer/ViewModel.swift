@@ -11,67 +11,71 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewModel {
-    // MARK: - Properties
-    let LARGER_IMAGE_URL = "https://picsum.photos/1280/720/?random"
-    var counter: Int = 0
-    var recodeTimes: [String] = []
+protocol ViewModelType {
+    var fetchImage: AnyObserver<Void> { get }
+    var recode: AnyObserver<Void> { get }
+       
+    var image: Observable<UIImage> { get }
+    var recodedTimes: Observable<[String]> { get }
+    var timerStart: Observable<String> { get }
+}
+
+class ViewModel: ViewModelType {
+    let disposeBag = DisposeBag()
     
+    // MARK: - 실제 사용될 Input
+    let fetchImage: AnyObserver<Void>
+    let recode: AnyObserver<Void>
     
-    // MARK: - Observable
-    func rxswiftLoadImage() -> Observable<UIImage?> {
-        let imageUrl : String = LARGER_IMAGE_URL
-        let url = URL(string: imageUrl)!
-        return Observable.create { seal in
-            let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-                
-                guard let data = data else {
-                    seal.onNext(nil)
-                    seal.onCompleted()
-                    return
-                }
-                
-                let image = UIImage(data: data)
-                seal.onNext(image)
-                seal.onCompleted()
-            }
-            task.resume()
-            
-            return Disposables.create()
-        }
-    }
+    // MARK: - 실제 사용될 Output
+    var image: Observable<UIImage>
+    var recodedTimes: Observable<[String]>
+    var timerStart: Observable<String>
     
-    func timerOn() -> Observable<String> {
-        return Observable.create { observe in
-            observe.onNext(self.time())
-            
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-                observe.onNext(self.time())
-            }
-            
-            return Disposables.create()
-        }
+    // MARK: - Init
+    init(domain: Fetchable = Store()) {
+        // 스트림
+        let fetching = PublishSubject<Void>()
+        let recoding = PublishSubject<Void>()
+   
+        let uiImage = BehaviorSubject<UIImage>(value: Mock.image )
+        let times = BehaviorSubject<[String]>(value: [])
+        let timer = BehaviorSubject<String>(value: "00:00:00")
         
-    }
+        // INPUT
+        fetchImage = fetching.asObserver()
+        
+        fetching
+            .debug()
+            .flatMap(domain.fetchImage)
+            .subscribe(onNext: uiImage.onNext)
+            .disposed(by: disposeBag)
+        
+        recode = recoding.asObserver()
     
-    func items() -> Observable<[String]> {
-        return Observable.create { obser in
-            obser.onNext(self.recodeTimes)
-            return Disposables.create()
+    
+        // OUTPUT
+        image = uiImage.asObserver()
+        
+        recodedTimes = times
+        
+        timerStart = timer.asObserver()
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            timer
+               .onNext(self.currentTime())
         }
+       
+           
     }
 
-    func recode() {
-        recodeTimes.append(self.time())
-    }
-    
     // MARK: - Private
-    
-    private func time() -> String {
-        var fommater = DateFormatter()
+    private func currentTime() -> String {
+        let fommater = DateFormatter()
         fommater.dateFormat = "HH:mm:ss"
-        var currentTime = fommater.string(from: Date())
+        let currentTime = fommater.string(from: Date())
         
         return currentTime
     }
 }
+

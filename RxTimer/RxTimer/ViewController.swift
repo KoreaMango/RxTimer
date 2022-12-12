@@ -12,46 +12,10 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
-    
-    var viewModel = ViewModel()
+    let viewModel = ViewModel()
     let disposeBag = DisposeBag()
     
-    lazy var timeLable: UILabel = {
-        let label = UILabel()
-        label.text = ""
-        label.font = UIFont.systemFont(ofSize:24)
-        label.textAlignment = .center
-        return label
-    }()
-    
-    lazy var picture: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName:
-                                "questionmark")
-        imageView.layer.borderWidth = 1.0
-        return imageView
-    }()
-    
-    lazy var changeButton: UIButton = {
-       let button = UIButton()
-        button.setTitle("사진 변경", for: .normal)
-        button.backgroundColor = .red
-        return button
-    }()
-    
-    var containerView: UIView = {
-       let view = UIView()
-        view.layer.borderWidth = 1.0
-        return view
-    }()
-    
-    var tableView: UITableView = {
-        var tableView = UITableView()
-        tableView.layer.borderWidth = 1.0
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        return tableView
-    }()
-    
+   // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,44 +23,34 @@ class ViewController: UIViewController {
         setConstraint()
         bind()
     }
-
+        
+    // MARK: - view setting
+    
     func bind() {
+        // --------------
+        // INPUT
+        // --------------
+        
         changeButton.rx.tap
             .bind {
-                self.loadImage()
-                self.viewModel.recode()
-                self.recordTime()
+                self.viewModel.fetchImage
+                self.viewModel.recode
             }
             .disposed(by: disposeBag)
         
-        viewModel.timerOn()
-            .observe(on: MainScheduler.instance)
-            .bind { str in
-                self.timeLable.text = str
-            }
+        // --------------
+        // OUTPUT
+        // --------------
         
-       
-    }
-    
-    func loadImage() {
-        _ = viewModel.rxswiftLoadImage()
-            .observe(on: MainScheduler.instance)
-            .subscribe({ result in
-                switch result {
-                case let .next(image):
-                    self.picture.image = image
-                case let .error(err):
-                    print(err.localizedDescription)
-                case .completed:
-                    break
-                }
-            })
-    }
-    
-    func recordTime() {
-        tableView.delegate = nil
-        tableView.dataSource = nil
-        viewModel.items()
+        viewModel.timerStart
+            .bind(to: timeLable.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.image
+            .bind(to: picture.rx.image)
+            .disposed(by: disposeBag)
+        
+        viewModel.recodedTimes
             .debug()
             .bind(to: tableView.rx.items) { (tableView, row, element) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
@@ -104,9 +58,9 @@ class ViewController: UIViewController {
                 return cell
             }
             .disposed(by: disposeBag)
-        
-    }
     
+    }
+   
     func setView() {
         view.addSubview(timeLable)
         view.addSubview(containerView)
@@ -151,6 +105,41 @@ class ViewController: UIViewController {
             make.trailing.equalTo(containerView.snp.trailing).offset(-50)
         }
     }
+    
+    // MARK: - View
+    lazy var timeLable: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.font = UIFont.systemFont(ofSize:24)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var picture: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.borderWidth = 1.0
+        return imageView
+    }()
+    
+    lazy var changeButton: UIButton = {
+       let button = UIButton()
+        button.setTitle("사진 변경", for: .normal)
+        button.backgroundColor = .red
+        return button
+    }()
+    
+    var containerView: UIView = {
+       let view = UIView()
+        view.layer.borderWidth = 1.0
+        return view
+    }()
+    
+    var tableView: UITableView = {
+        var tableView = UITableView()
+        tableView.layer.borderWidth = 1.0
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        return tableView
+    }()
 }
 
 
